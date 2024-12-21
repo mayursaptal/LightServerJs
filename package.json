@@ -1,6 +1,6 @@
 {
   "name": "lightserverjs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Lightweight Node.js framework for web applications.",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.js",
