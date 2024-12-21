@@ -5,11 +5,8 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.js",
   "exports": {
-    ".": {
-      "require": "./dist/bundle.cjs.js",
-      "import": "./dist/bundle.js"
-    },
-    "default": "./dist/bundle.js"
+    "import": "./dist/bundle.js",
+    "require": "./dist/bundle.cjs.js"
   },
   "scripts": {
     "start": "node dist/bundle.cjs.js",

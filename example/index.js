@@ -1,4 +1,4 @@
-import app from "./server";
+import app from 'lightserverjs';
 
 const port = 3000;
 app.listen(port, () => {
