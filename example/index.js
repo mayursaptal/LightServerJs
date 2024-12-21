@@ -9,14 +9,29 @@ app.use((req, res, next) => {
 // Route-specific middleware example
 const authMiddleware = (req, res, next) => {
   console.log("Route-specific middleware: Authentication check");
-  // Add authentication logic here
-  next();
+
+  // Add your authentication logic here
+  const isAuthenticated = false; // Example: Replace with actual auth logic
+
+  if (!isAuthenticated) {
+    res.writeHead(401, { "Content-Type": "text/plain" });
+    res.end("Unauthorized");
+    return; // Terminate the request here
+  }
+
+  next(); // Proceed to the next middleware or route handler
 };
 
 // Routes
 app.get("/", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Welcome to LightServerJs!");
+});
+
+
+app.addRoute("get", "/about", (req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("This is a protected route.");
 });
 
 app.get(
