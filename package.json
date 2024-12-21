@@ -1,0 +1,12 @@
+{
+  "name": "lightserverjs",
+  "version": "1.0.0",
+  "description": "Light weight node js framwork for web",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Mayur Saptal",
+  "license": "ISC",
+  "type": "module"
+}
