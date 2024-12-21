@@ -1,6 +1,6 @@
 {
   "name": "lightserverjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Light weight node js framwork for web",
   "main": "index.js",
   "scripts": {
