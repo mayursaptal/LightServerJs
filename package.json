@@ -1,16 +1,32 @@
 {
   "name": "lightserverjs",
   "version": "1.0.3",
-  "description": "Light weight node js framwork for web",
-  "main": "index.js",
+  "description": "Lightweight Node.js framework for web applications.",
+  "main": "dist/bundle.js",
+  "exports": {
+    ".": {
+      "require": "./dist/bundle.js",
+      "import": "./dist/bundle.js"
+    }
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "mkdir -p dist && esbuild index.js --bundle --platform=node --minify --outfile=dist/bundle.js"
   },
   "author": "Mayur Saptal",
   "license": "ISC",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/mayursaptal/LightServerJs"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.24.2"
   }
 }
