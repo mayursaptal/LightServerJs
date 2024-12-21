@@ -2,16 +2,18 @@
   "name": "lightserverjs",
   "version": "1.0.4",
   "description": "Lightweight Node.js framework for web applications.",
-  "main": "dist/bundle.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.js",
   "exports": {
     ".": {
-      "require": "./dist/bundle.js",
+      "require": "./dist/bundle.cjs.js",
       "import": "./dist/bundle.js"
-    }
+    },
+    "default": "./dist/bundle.js"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "mkdir -p dist && esbuild index.js --bundle --platform=node --minify --outfile=dist/bundle.js"
+    "start": "node dist/bundle.cjs.js",
+    "build": "mkdir -p dist && esbuild index.js --bundle --platform=node --minify --format=esm --outfile=dist/bundle.js && esbuild index.js --bundle --platform=node --minify --format=cjs --outfile=dist/bundle.cjs.js"
   },
   "author": "Mayur Saptal",
   "license": "ISC",

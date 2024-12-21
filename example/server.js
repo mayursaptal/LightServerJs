@@ -1,4 +1,4 @@
-import app from "./app.js";
+import app from 'lightserverjs';
 
 // Global middleware example
 app.use((req, res, next) => {
