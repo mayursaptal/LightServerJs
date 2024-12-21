@@ -25,6 +25,23 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "lightweight",
+    "nodejs",
+    "framework",
+    "web",
+    "server",
+    "http",
+    "middleware",
+    "router",
+    "rest-api",
+    "minimal",
+    "fast",
+    "express-alternative",
+    "web-framework",
+    "node",
+    "lightserverjs"
+  ],
   "devDependencies": {
     "esbuild": "^0.24.2"
   }
