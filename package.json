@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node dist/bundle.cjs.js",
-    "build": "mkdir -p dist && esbuild index.js --bundle --platform=node --minify --format=esm --outfile=dist/bundle.js && esbuild index.js --bundle --platform=node --minify --format=cjs --outfile=dist/bundle.cjs.js"
+    "build": "mkdir -p dist && esbuild src/index.ts --bundle --platform=node --minify --format=esm --outfile=dist/bundle.js && esbuild src/index.ts --bundle --platform=node --minify --format=cjs --outfile=dist/bundle.cjs.js"
   },
   "author": "Mayur Saptal",
   "license": "ISC",
@@ -43,6 +43,8 @@
     "lightserverjs"
   ],
   "devDependencies": {
-    "esbuild": "^0.24.2"
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.2"
   }
 }

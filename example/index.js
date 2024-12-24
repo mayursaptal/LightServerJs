@@ -11,7 +11,7 @@ const authMiddleware = (req, res, next) => {
   console.log("Route-specific middleware: Authentication check");
 
   // Add your authentication logic here
-  const isAuthenticated = false; // Example: Replace with actual auth logic
+  const isAuthenticated = true; // Example: Replace with actual auth logic
 
   if (!isAuthenticated) {
     res.writeHead(401, { "Content-Type": "text/plain" });
@@ -29,9 +29,9 @@ app.get("/", (req, res) => {
 });
 
 
-app.addRoute("get", "/about", (req, res) => {
+app.route("get", "/about", (req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("This is a protected route.");
+  res.end("This is a About route.");
 });
 
 app.get(
