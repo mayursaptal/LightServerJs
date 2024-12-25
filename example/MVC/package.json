@@ -1,0 +1,19 @@
+{
+  "name": "lightserverjs-app",
+  "version": "1.0.0",
+  "description": "A LightServerJs example with separated files",
+  "main": "app.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "build": "tsc",
+    "serve": "node dist/app.js"
+  },
+  "dependencies": {
+    "lightserverjs": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0",
+    "ts-node": "^10.0.0"
+  }
+}
