@@ -1,6 +1,9 @@
 // `matchRoute` is a function that checks if a given path matches a dynamic route path
 // It also extracts the parameters from the dynamic segments in the route path (e.g., :id)
 export const matchRoute = (path: string, routePath: string) => {
+
+  path = path.replace(/\/+$/, ""); 
+
   const paramNames: string[] = []; // Array to store the names of parameters from the route path
   // Convert the routePath to a regular expression
   // - `:([^/]+)` captures dynamic segments (e.g., `:id`) and stores their names in `paramNames`
@@ -16,6 +19,7 @@ export const matchRoute = (path: string, routePath: string) => {
   const regex = new RegExp(`^${regexPath}$`);
   // Execute the regular expression against the provided `path`
   const match = regex.exec(path);
+
 
   // If the path does not match the route, return null
   if (!match) return null;

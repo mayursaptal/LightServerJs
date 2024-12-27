@@ -14,6 +14,14 @@ app.use((req, res, next) => {
   next();
 });
 
+
+app.get('/',(req, res, next) => {
+  res.writeHead(200);
+  res.end('Hello World');
+});
+
+
+
 // Use route-specific middleware for authentication on routes
 app.use(setHeadersMiddleware);
 
